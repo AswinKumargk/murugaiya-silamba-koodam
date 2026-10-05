@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Cinzel', serif;
+  --font-sans: 'Outfit', system-ui, -apple-system, sans-serif;
+  --font-tamil: 'Noto Serif Tamil', serif;
+  --color-silambam-black: #08090c;
+  --color-silambam-dark: #0e1117;
+  --color-silambam-card: #141822;
+  --color-silambam-card-hover: #1c2230;
+  --color-silambam-border: #242b3a;
+  --color-silambam-red: #9e121b;
+  --color-silambam-crimson: #bf1823;
+  --color-silambam-gold: #d4af37;
+  --color-silambam-gold-light: #f3cf65;
+  --color-silambam-gold-dark: #91711a;
+}
+
+@layer base {
+  body {
+    background-color: #08090c;
+    color: #e5e7eb;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: var(--font-serif);
+    letter-spacing: 0.03em;
+  }
+
+  /* Tamil text: use Noto Sans Tamil for body-size, Noto Serif Tamil for headings */
+  [lang="ta"] {
+    font-family: 'Noto Sans Tamil', 'Noto Serif Tamil', sans-serif;
+    line-height: 1.75;
+    letter-spacing: 0;
+  }
+}
+
+/* Custom martial arts visual styling */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #fef3c7 0%, #d4af37 50%, #996515 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.crimson-gradient-text {
+  background: linear-gradient(135deg, #fca5a5 0%, #dc2626 50%, #7f1d1d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-glow {
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
+}
+
+.crimson-glow {
+  box-shadow: 0 0 25px rgba(190, 24, 35, 0.3);
+}
+
+.border-gold-subtle {
+  border-color: rgba(212, 175, 55, 0.25);
+}
+
+.border-gold-bright {
+  border-color: rgba(212, 175, 55, 0.6);
+}
+
+/* Diagonal martial clip paths */
+.clip-diagonal {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%);
+}
+
+.clip-badge {
+  clip-path: polygon(8% 0%, 92% 0%, 100% 50%, 92% 100%, 8% 100%, 0% 50%);
+}
+
+/* Traditional Kolam / Geometric pattern background */
+.bg-kolam-pattern {
+  background-image: radial-gradient(rgba(212, 175, 55, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
